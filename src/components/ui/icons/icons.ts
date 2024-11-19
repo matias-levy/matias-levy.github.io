@@ -335,6 +335,14 @@ export const Icons = {
     fill: "currentColor",
     title: "Slack",
   },
+  instagramFooter: {
+    paths: [{ d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" }],
+    class:
+      "h-4 w-4 flex-shrink-0 fill-current text-neutral-700 dark:text-neutral-400",
+    viewbox: "0 0 24 24",
+    fill: "currentColor",
+    title: "Instagram",
+  },
   quotation: {
     paths: [
       {

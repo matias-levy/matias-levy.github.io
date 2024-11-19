@@ -1,16 +1,13 @@
 ---
 //Import relevant dependencies
-import ThemeIcon from "@components/ThemeIcon.astro";
 import NavLink from "@components/ui/links/NavLink.astro";
-import Authentication from "../misc/Authentication.astro";
 import enStrings from "@utils/navigation.ts";
-import frStrings from "@utils/fr/navigation.ts";
 import BrandLogo from "@components/BrandLogo.astro";
-import LanguagePicker from "@components/ui/LanguagePicker.astro";
+// import LanguagePicker from "@components/ui/LanguagePicker.astro";
 
 // Select the correct translation based on the page's lang prop:
-const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
-const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
+const strings = enStrings;
+const homeUrl = "/";
 ---
 
 <!-- Main header component -->
@@ -29,7 +26,7 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
         href={homeUrl}
         aria-label="Brand"
       >
-        <BrandLogo class="h-auto w-24" />
+        <BrandLogo class="h-auto w-24 dark:text-neutral-400" />
       </a>
       <!-- Collapse toggle for smaller screens -->
       <div class="ml-auto mr-5 md:hidden">
@@ -72,9 +69,9 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
         </button>
       </div>
       <!-- ThemeIcon component specifically for smaller screens -->
-      <span class="inline-block md:hidden">
+      <!-- <span class="inline-block md:hidden">
         <ThemeIcon />
-      </span>
+      </span> -->
     </div>
     <!-- Contains navigation links -->
     <div
@@ -90,12 +87,11 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
           <NavLink url={link.url} name={link.name} />
         ))}
 
-        <Authentication />
-        <LanguagePicker />
+        <!-- <LanguagePicker /> -->
         <!-- ThemeIcon component specifically for larger screens -->
-        <span class="hidden md:inline-block">
+        <!-- <span class="hidden md:inline-block">
           <ThemeIcon />
-        </span>
+        </span> -->
       </div>
     </div>
   </nav>
