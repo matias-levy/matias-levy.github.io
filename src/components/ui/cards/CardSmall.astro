@@ -42,7 +42,7 @@ const imageClass =
     </span>
     <div class="flex flex-wrap gap-4">
       {
-        product.data.tags.map((tag) => {
+        product.data.tags.map((tag: any) => {
           return (
             <div class="text-nowrap rounded-full bg-yellow-500 px-2 text-sm font-bold text-gray-900">
               {tag}
