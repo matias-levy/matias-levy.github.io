@@ -6,7 +6,7 @@ import compressor from "astro-compressor";
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: "https://matias-levy.github.io/",
+  site: "http://mlalabs.xyz/",
   // base: "my-repo",
   image: {
     domains: ["images.unsplash.com"],
