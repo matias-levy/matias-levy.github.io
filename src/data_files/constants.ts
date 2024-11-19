@@ -6,7 +6,7 @@ export const SITE = {
   description:
     "MLA Labs is a small argentinian business focused on developing and distributing original Eurorack modules focused on versatibility on small systems.",
   description_short: "MLA Labs is a business focused on Eurorack modules.",
-  url: "https://screwfast.uk",
+  url: "https://matias-levy.github.io/",
   author: "MLA Labs",
 };
 
@@ -34,8 +34,8 @@ export const OG = {
   locale: "en_US",
   type: "website",
   url: SITE.url,
-  title: `${SITE.title}: : Hardware Tools & Construction Services`,
+  title: `${SITE.title}: Eurorack developments`,
   description:
-    "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
+    "MLA Labs is a small argentinian business focused on developing and distributing original Eurorack modules focused on versatibility on small systems.",
   // image: ogImageSrc,
 };
