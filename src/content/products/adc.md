@@ -41,8 +41,4 @@ specifications:
   depth: "44mm"
   inputImpeadence: "Aprox. 100kOhm"
   outputImpeadence: "1kOhm"
-
-photosAndVideos:
-  first: "@/images/blueprint-1.avif"
-  second: "@/images/blueprint-2.avif"
 ---

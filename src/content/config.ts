@@ -32,11 +32,6 @@ const productsCollection = defineCollection({
         outputImpeadence: z.string(),
         extra: z.string().optional(),
       }),
-
-      photosAndVideos: z.object({
-        first: image().optional(),
-        second: image().optional(),
-      }),
     }),
 });
 
