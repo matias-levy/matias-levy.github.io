@@ -31,11 +31,12 @@ fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
 ---
 
 <!-- Root container, which arranges the heading and content -->
-<div class="flex gap-x-7 py-6">
+<div class="flex gap-x-7 py-6 w-full">
   <!-- Slot to allow for extensibility of the component -->
   <slot />
-  <div class="grow">
+  <div class="grow flex flex-col justify-between">
     <!-- Heading of the section -->
+     <div>
     <h3 class="font-bold text-neutral-700 dark:text-neutral-300">
       {heading}
     </h3>
@@ -47,6 +48,7 @@ fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
         <p class="mt-1 text-sm italic text-neutral-500">{addressContent}</p>
       ) : null
     }
+    </div>
     <!-- Conditional rendering of a link if isLinkVisible is true.
          The link also conditionally includes an arrow SVG if isArrowVisible is true -->
     {

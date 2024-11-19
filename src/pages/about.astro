@@ -7,14 +7,12 @@ import RightSection from "@components/ui/blocks/RightSection.astro";
 import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
 
 // Import necessary images
-import blueprints from "@images/blueprints-image.avif";
-import personWorking from "@images/person-working.avif";
-import beforeAfter from "@images/before-after.avif";
-import constructionWorkers from "@images/construction-workers.avif";
-import aerialView from "@images/aerial-view.avif";
-import usingTools from "@images/using-tools.avif";
-import progressBuilding from "@images/progress-building.avif";
-import underConstruction from "@images/under-construction.avif";
+import about1 from "@images/about/about1.jpg";
+import about2 from "@images/about/about2.jpg";
+import about3 from "@images/about/about3.jpg";
+import about4 from "@images/about/about4.jpg";
+import motet from "@images/about/MOTET.jpg";
+import adc from "@images/about/ADC.jpg";
 import { SITE } from "@data/constants";
 
 interface Article {
@@ -40,18 +38,18 @@ const articles: Article[] = [
     subTitle:
       "MLA labs started as a DIY pasion project of a synth entusiast in Buenos Aires, Argentina in 2020. It started to sell it's first modules on the local market around the end of 2021.",
     single: false,
-    imgOne: blueprints,
-    imgOneAlt: "Blueprints and digital tablet with construction plans.",
-    imgTwo: personWorking,
-    imgTwoAlt: "Person working in the office",
+    imgOne: about1,
+    imgOneAlt: "PCBs for early VCO modules.",
+    imgTwo: about2,
+    imgTwoAlt: "PCBs for early VCO modules.",
   },
   {
     isRightSection: false,
     title: "Philosophy",
     subTitle:
       "Developing in Argentina is not an easy task, from the very start MLA labs focused on ways of designing modules that would make them accesible to the local music scene. It's from that limitation on components and manufacturing techniques that our original concepts started to emerge, focusing on being very versatible, as to allow small systems (liko those people starting out have) to have great power.",
-    img: beforeAfter,
-    imgAlt: "Construction site before and after",
+    img: about3,
+    imgAlt: "Early DIY PCBs",
   },
   {
     isRightSection: true,
@@ -59,19 +57,18 @@ const articles: Article[] = [
     subTitle:
       "Our modules tend to focus on ways of sequencing and designing sound that would allow for controlled chaos. In that regard, MOTET and ADC are our most clear examples.",
     single: false,
-    imgOne: constructionWorkers,
-    imgOneAlt: "Construction workers orchestrating a project",
-    imgTwo: aerialView,
-    imgTwoAlt: "Aerial view of managed construction",
+    imgOne: motet,
+    imgOneAlt: "Our module MOTET",
+    imgTwo: adc,
+    imgTwoAlt: "Our module ADC",
   },
   {
     isRightSection: false,
     title: "Our mission",
     subTitle:
       "We have come a long way since the beginnings of MLA labs, we want to share with the world our original creations and inspire people on their search in the wonderful microkosmos that is Eurorack.",
-    img: usingTools,
-    imgAlt:
-      "Man in orange and black vest wearing white helmet holding yellow and black power tool",
+    img: about4,
+    imgAlt: "Modules ready to ship",
   },
 ];
 
@@ -84,16 +81,18 @@ const pageTitle: string = `About | ${SITE.title}`;
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": "https://screwfast.uk/services",
-    "url": "https://screwfast.uk/services",
-    "name": "Expert Consultation Services | ScrewFast",
-    "description": "Uniting expertise with your vision, ScrewFast provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
-    "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://screwfast.uk",
-        "name": "ScrewFast",
-        "description": "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs."
+    url: "https://screwfast.uk/services",
+    name: "Expert Consultation Services | ScrewFast",
+    description:
+      "Uniting expertise with your vision, ScrewFast provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://screwfast.uk",
+      name: "ScrewFast",
+      description:
+        "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
     },
-    "inLanguage": "en-US"
+    inLanguage: "en-US",
   }}
 >
   <!--MainSection is the introductory section of the page, it also contains a CTA button-->
@@ -113,7 +112,7 @@ const pageTitle: string = `About | ${SITE.title}`;
   If 'single' is true, it displays one image, otherwise it displays two.
   -->
   {
-    articles.map(article => {
+    articles.map((article) => {
       return article.isRightSection ? (
         <RightSection
           title={article.title}
