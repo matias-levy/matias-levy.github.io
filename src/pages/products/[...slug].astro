@@ -70,8 +70,12 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
           </div>
         </p>
         <div class="mt-10 flex gap-4">
-          <PrimaryCTA title={"Manual"} url={product.data.manualURL} />
-          <PrimaryCTA title={"ModularGrid"} url={product.data.modularGridURL} />
+          <PrimaryCTA title={"Manual"} url={product.data.manualURL} blank />
+          <PrimaryCTA
+            title={"ModularGrid"}
+            url={product.data.modularGridURL}
+            blank
+          />
         </div>
       </div>
       <div>
@@ -132,39 +136,37 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
                 >
                   Technical Specifications
                 </h3>
-                <p class="mt-1 text-neutral-600 dark:text-neutral-400">
-                  <ul>
-                    <li>Module width: {product.data.specifications.HP}</li>
-                    <li>Module depth: {product.data.specifications.depth}</li>
-                    <li>
-                      +12v rail consumption: {
-                        product.data.specifications["current+12"]
-                      }
-                    </li>
-                    <li>
-                      -12v rail consumption: {
-                        product.data.specifications["current-12"]
-                      }
-                    </li>
-                    <li>
-                      Input impeadence: {
-                        product.data.specifications.inputImpeadence
-                      }
-                    </li>
-                    <li>
-                      Output impeadence: {
-                        product.data.specifications.outputImpeadence
-                      }
-                    </li>
-                    {
-                      product.data.specifications.extra && (
-                        <li>
-                          Output impeadence: {product.data.specifications.extra}
-                        </li>
-                      )
+                <ul class="mt-1 text-neutral-600 dark:text-neutral-400">
+                  <li>Module width: {product.data.specifications.HP}</li>
+                  <li>Module depth: {product.data.specifications.depth}</li>
+                  <li>
+                    +12v rail consumption: {
+                      product.data.specifications["current+12"]
                     }
-                  </ul>
-                </p>
+                  </li>
+                  <li>
+                    -12v rail consumption: {
+                      product.data.specifications["current-12"]
+                    }
+                  </li>
+                  <li>
+                    Input impeadence: {
+                      product.data.specifications.inputImpeadence
+                    }
+                  </li>
+                  <li>
+                    Output impeadence: {
+                      product.data.specifications.outputImpeadence
+                    }
+                  </li>
+                  {
+                    product.data.specifications.extra && (
+                      <li>
+                        Output impeadence: {product.data.specifications.extra}
+                      </li>
+                    )
+                  }
+                </ul>
               </div>
             </div>
           </div>

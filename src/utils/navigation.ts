@@ -19,13 +19,9 @@ const footerLinks = [
 ];
 // An object of links for social icons
 const socialLinks = {
-  facebook: "https://www.facebook.com/",
-  instagram: "https://www.instagram.com/",
-  youtube: "https://www.youtube.com/",
-  x: "https://twitter.com/",
-  github: "https://github.com/mearashadowfax/ScrewFast",
-  google: "https://www.google.com/",
-  slack: "https://slack.com/",
+  facebook: "https://www.facebook.com/MLA.labs",
+  instagram: "https://www.instagram.com/mla.labs/",
+  youtube: "https://www.youtube.com/@MLALabs",
 };
 
 export default {
