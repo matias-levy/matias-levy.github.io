@@ -9,11 +9,11 @@ import { SITE } from "@data/constants";
 import SecondaryCTA from "@/components/ui/buttons/SecondaryCTA.astro";
 
 // Global declaration for gsap animation library
-declare global {
-  interface Window {
-    gsap: any;
-  }
-}
+// declare global {
+//   interface Window {
+//     gsap: any;
+//   }
+// }
 
 // This gets the static paths for all the unique products
 
@@ -34,43 +34,30 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
 ---
 
 <MainLayout title={pageTitle}>
-  <div id="overlay" class="fixed inset-0 bg-neutral-200 dark:bg-neutral-800">
-  </div>
+  <div id="overlay" class="fixed bg-neutral-200 dark:bg-neutral-800"></div>
 
   <section
     class="mx-auto flex max-w-[85rem] flex-col px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
   >
-    <div>
-      <p
-        id="fadeText"
-        class="mb-8 max-w-prose text-pretty font-light text-neutral-700 dark:text-neutral-300 sm:text-xl"
-      >
-        {product.data.description}
-      </p>
-    </div>
-    <div
-      class="flex flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0"
-    >
+    <div class="flex flex-col items-center justify-between gap-7 xl:flex-row">
       <div id="fadeInUp">
         <h1
-          class="block text-4xl font-bold tracking-tighter text-neutral-800 dark:text-neutral-200 sm:text-5xl md:text-6xl lg:text-7xl"
+          class="mb-1 block pb-4 text-4xl font-bold tracking-tighter text-neutral-800 dark:text-neutral-200 sm:text-5xl md:text-6xl lg:text-7xl"
         >
           {product.data.title}
         </h1>
-        <p class="mt-4 text-lg text-neutral-600 dark:text-neutral-400">
-          <div class="flex flex-wrap gap-2">
-            {
-              product.data.tags.map((tag) => {
-                return (
-                  <div class="text-nowrap rounded-full bg-yellow-500 px-2 text-sm font-bold text-gray-900">
-                    {tag}
-                  </div>
-                );
-              })
-            }
-          </div>
-        </p>
-        <div class="mt-10 flex gap-4">
+        <div class="mb-6 flex flex-wrap gap-2">
+          {
+            product.data.tags.map((tag) => {
+              return (
+                <div class="text-nowrap rounded-full bg-yellow-500 px-2 text-sm font-bold text-gray-900">
+                  {tag}
+                </div>
+              );
+            })
+          }
+        </div>
+        <div class="mb-6 flex flex-wrap gap-4">
           <PrimaryCTA title={"Manual"} url={product.data.manualURL} blank />
           <PrimaryCTA
             title={"Manual (Spanish)"}
@@ -92,15 +79,22 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
             )
           }
         </div>
+        <p
+          id="fadeText"
+          class="mb-8 max-w-prose text-pretty font-light text-neutral-700 dark:text-neutral-300 sm:text-xl"
+        >
+          {product.data.description}
+        </p>
       </div>
       <div>
         <Image
           id="fadeInMoveRight"
           src={product.data.imgMain}
-          class="w-[600px]"
+          class="w-[600px] rounded-xl"
           alt={product.data.imgMainAlt}
           format={"avif"}
           loading={"eager"}
+          quality="low"
         />
       </div>
     </div>
@@ -198,7 +192,8 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
                     alt={img.imgAlt}
                     draggable={"false"}
                     format={"avif"}
-                    class={"w-[500px] rounded-lg"}
+                    class={"w-[500px] rounded-xl"}
+                    quality="low"
                   />
                 );
               })
@@ -211,7 +206,7 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
   </div>
 </MainLayout>
 
-<script>
+<!-- <script>
   import { gsap } from "gsap";
 
   type AnimationSettings = {
@@ -269,7 +264,7 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
   );
 
   timeline.to("#overlay", { duration: 1, autoAlpha: 0, delay: 0.2 });
-</script>
+</script> -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     function setButtonInactive(btn: any, activeButton: any) {
