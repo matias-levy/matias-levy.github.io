@@ -13,7 +13,7 @@ tags:
     "Chaos Generator",
   ]
 id: 1
-imgMain: "@/images/Products/ADC/ADC-1.jpg"
+imgMain: "@/images/Products/ADC/ADCRect-1.jpg"
 imgMainAlt: "ADC Front view"
 images:
   - image: "@/images/Products/ADC/ADC-1.jpg"
