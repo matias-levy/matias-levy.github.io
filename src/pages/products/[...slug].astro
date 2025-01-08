@@ -6,6 +6,7 @@ import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { SITE } from "@data/constants";
+import SecondaryCTA from "@/components/ui/buttons/SecondaryCTA.astro";
 
 // Global declaration for gsap animation library
 declare global {
@@ -72,10 +73,24 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
         <div class="mt-10 flex gap-4">
           <PrimaryCTA title={"Manual"} url={product.data.manualURL} blank />
           <PrimaryCTA
+            title={"Manual (Spanish)"}
+            url={product.data.manualURLSpanish}
+            blank
+          />
+          <PrimaryCTA
             title={"ModularGrid"}
             url={product.data.modularGridURL}
             blank
           />
+          {
+            product.data.YouTubeURL && (
+              <PrimaryCTA
+                title={"YouTube videos"}
+                url={product.data.YouTubeURL}
+                blank
+              />
+            )
+          }
         </div>
       </div>
       <div>
@@ -104,8 +119,8 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
         first={true}
       />
       <ProductTabBtn
-        title={"Photos and videos"}
-        id={"Photos and videos"}
+        title={"Photos"}
+        id={"Photos"}
         dataTab={"#tabs-with-card-2"}
         first={false}
       />
@@ -189,7 +204,7 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
               })
             }
           </div>
-          {product.data.youtube && <div set:html={product.data.youtube} />}
+          <!-- {product.data.youtube && <div set:html={product.data.youtube} />} -->
         </div>
       </div>
     </div>

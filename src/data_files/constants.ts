@@ -1,12 +1,12 @@
 // import ogImageSrc from "@images/social.png";
 
 export const SITE = {
-  title: "MLA labs",
+  title: "MLA Labs",
   tagline: "Eurorack developments",
   description:
     "MLA Labs is a small argentinian business focused on developing and distributing original Eurorack modules focused on versatibility on small systems.",
   description_short: "MLA Labs is a business focused on Eurorack modules.",
-  url: "https://matias-levy.github.io/",
+  url: "https://mlalabs.xyz/",
   author: "MLA Labs",
 };
 

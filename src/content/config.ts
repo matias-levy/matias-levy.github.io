@@ -15,7 +15,9 @@ const productsCollection = defineCollection({
       images: z.array(z.object({ image: image(), imgAlt: z.string() })),
       youtube: z.string().optional(),
       manualURL: z.string(),
+      manualURLSpanish: z.string(),
       modularGridURL: z.string(),
+      YouTubeURL: z.string().optional(),
 
       highlightsList: z.array(
         z.object({
