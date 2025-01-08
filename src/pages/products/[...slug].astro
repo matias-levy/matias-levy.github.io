@@ -271,9 +271,9 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
       if (btn !== activeButton) {
         btn.classList.remove(
           "active",
-          "bg-neutral-100",
           "hover:border-transparent",
-          "dark:bg-white/[.05]"
+          "dark:bg-white/[.05]",
+          "bg-opacity-100"
         );
 
         const tabId = btn.getAttribute("data-target");
@@ -295,9 +295,9 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
     function activateButton(button: any) {
       button.classList.add(
         "active",
-        "bg-neutral-100",
         ",hover:border-transparent",
-        "dark:bg-white/[.05]"
+        "dark:bg-white/[.05]",
+        "bg-opacity-100"
       );
 
       const tabId = button.getAttribute("data-target");
