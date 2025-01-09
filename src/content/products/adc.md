@@ -5,9 +5,9 @@ There are two modes of operation: Triggered (sampling input signals with trigger
 Features include bit rotation via CV, rate of the Free-Running mode via CV, internal noise source, and configurable jumpers for advanced behavior. Ideal for creating chaotic CV, digital noise, or randomized triggers on a small footprint."
 tags:
   [
-    "Sample and hold",
-    "Protosequencer",
-    "Gate sequencer",
+    "Sample and Hold",
+    "Gate Randomizer",
+    "Gate Proto-sequencer",
     "Noise Source",
     "Down Sampler",
     "Chaos Generator",
