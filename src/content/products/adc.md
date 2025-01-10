@@ -28,7 +28,7 @@ youtube: |
   <iframe width="560" height="315" src="https://www.youtube.com/embed/HDFFU36d9GU?si=e20XM4B8yUtI0p03" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 manualURL: "/ADC/ADCManual-English.pdf"
 manualURLSpanish: "/ADC/ADCManual-Spanish.pdf"
-modularGridURL: "https://modulargrid.com/e/other-unknown-adc"
+modularGridURL: "https://modulargrid.com/e/mla-labs-adc"
 YouTubeURL: "https://www.youtube.com/playlist?list=PLF3fFoDZDvdQJwz6vylqEivGRfUWe-ZZO"
 
 highlightsList:
